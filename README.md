@@ -48,7 +48,6 @@ npx playwright test tests/searchTitle.spec.ts
 - TypeScript
 
 ## 📝 Notes
-- Tests run on Chromium, Firefox, and WebKit
-- Reports in `playwright-report` directory
-- Failed tests include screenshots/videos 
+- Tests run on Chromium
+- Reports could be viewed in GitHub Pages, see in screenshots
 
