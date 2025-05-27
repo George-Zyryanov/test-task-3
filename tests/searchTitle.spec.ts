@@ -1,8 +1,9 @@
 import { expect } from "@playwright/test";
 import { createTestMetadata } from "../lib/TestMetaData";
 import test from "../lib/BaseTest";
+import { movieTitle } from "../data/test-data.json";
 
-test('Verify Single Movie Page Title', createTestMetadata({
+test('Verify Movie Title on Details Page After Search', createTestMetadata({
     testId: 'IMDB-001',
     testName: 'Elements are present on Single Title Page',
     description: 'Verify that title is present on Single Title Page for a film title search',
@@ -13,7 +14,7 @@ test('Verify Single Movie Page Title', createTestMetadata({
     pageUnderTest: 'SingleFilmTitlePage',
     featureUnderTest: 'FilmTitleSearch',
 }), async ({mainPage, searchResultsPage, singleTitlePage}) =>{
-    const movieTitle = "Inception";
+    
 
     // Navigate to main page
     await mainPage.goto();

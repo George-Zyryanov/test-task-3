@@ -12,6 +12,6 @@ export class SingleTitlePage {
         this.context = context;
         this.movieTitle = page.getByTestId('hero__primary-text');
         this.movieRating = page.getByRole('link', { name: 'View User Ratings' })
-        this.movieReleaseYear = page.getByTestId('hero-parent').getByRole('link').nth(5);
+        this.movieReleaseYear = page.getByTestId('hero-parent').getByRole('link', { name: /^\d{4}$/ });
     }
 }
