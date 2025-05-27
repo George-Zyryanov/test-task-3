@@ -1,18 +1,16 @@
 import { type Locator, type Page, BrowserContext } from '@playwright/test';
+import { BasePage } from './BasePage';
 
-export class Top250FilmsPage {
-    readonly page: Page;
-    readonly context: BrowserContext;
+export class Top250FilmsPage extends BasePage {
     readonly firstFilmTitle: Locator;
     
     constructor(page: Page, context : BrowserContext) {
-        this.page = page;
-        this.context = context;
+        super(page, context);
         this.firstFilmTitle = this.page.getByTestId('chart-layout-main-column').getByRole('heading').first();
     }
 
     async goto() {
-        await this.page.goto('/chart/top');
+        await super.goto('/chart/top');
     }
 
     async clickFirstFilmTitle() {

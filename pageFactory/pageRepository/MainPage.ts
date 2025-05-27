@@ -1,18 +1,16 @@
 import { Locator, Page, BrowserContext } from '@playwright/test';
+import { BasePage } from './BasePage';
 
-export class MainPage {
-    readonly page: Page;
-    readonly context: BrowserContext;
+export class MainPage extends BasePage {
     readonly searchForm : Locator;
 
     constructor(page: Page, context : BrowserContext) {
-        this.page = page;
-        this.context = context;
+        super(page, context);
         this.searchForm = page.getByTestId('suggestion-search');
     }
 
     async goto() {
-        await this.page.goto('/'); 
+        await super.goto('/');
     }
 
     async searchForTitle(title : string) {
