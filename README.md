@@ -28,6 +28,10 @@ npx playwright test --ui
 npx playwright test tests/searchTitle.spec.ts
 ```
 
+## 📸 Screenshots
+![Test Report Screenshot](./images/test-report.png)
+*Test Report Example* 
+
 ## 📋 Test Scenarios
 1. **Search and Validate Movie**
    - Search for a movie title
@@ -47,3 +51,4 @@ npx playwright test tests/searchTitle.spec.ts
 - Tests run on Chromium, Firefox, and WebKit
 - Reports in `playwright-report` directory
 - Failed tests include screenshots/videos 
+
